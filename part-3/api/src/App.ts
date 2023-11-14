@@ -6,13 +6,19 @@ import { Subcategory } from './entity/Subcategory'
 import { Supplier } from './entity/Supplier'
 import { Uom } from './entity/Uom'
 import { Warehouse } from './entity/Warehouse'
-import postgraphile from "postgraphile"
-import { makeExtendSchemaPlugin, gql } from "graphile-utils"
+import postgraphile, { makePluginHook } from "postgraphile"
+import { makeExtendSchemaPlugin, gql, embed } from "graphile-utils"
 import { registerTransaction } from './service/inventory'
 import cors from 'cors'
+import PgPubsub from "@graphile/pg-pubsub"
+import * as dotenv from 'dotenv'
+dotenv.config();
 
 
-const RegisterTransactionPlugin = makeExtendSchemaPlugin(_build => {
+const pluginHook = makePluginHook([PgPubsub]);
+
+
+const RegisterTransactionPlugin = makeExtendSchemaPlugin(({ pgSql: sql }) => {
   return {
     typeDefs: gql`
       input RegisterTransactionInput {
@@ -28,10 +34,18 @@ const RegisterTransactionPlugin = makeExtendSchemaPlugin(_build => {
         warehouseId: Int,
         updatedQuantity: Int,
       }
+      
+      type categoryCreatedPayload{
+        category: Category
+        event: String
+      }
 
       extend type Mutation {
         registerTransaction(input: RegisterTransactionInput!): RegisterTransactionPayload
       }      
+      extend type Subscription {
+         categoryCreated: categoryCreatedPayload @pgSubscription(topic: "graphql:category")
+      }
     `,
     resolvers: {
       Mutation: {
@@ -45,12 +59,29 @@ const RegisterTransactionPlugin = makeExtendSchemaPlugin(_build => {
             throw e
           }
         }
+      },
+      categoryCreatedPayload: {
+        async category(
+            event,
+            _args,
+            context,
+            { graphile: { selectGraphQLResultFromTable } }
+        ) {
+          console.log('event', event);
+          const rows = await selectGraphQLResultFromTable(
+              sql.fragment`category`,
+              (tableAlias, sqlBuilder) => {
+                sqlBuilder.where(
+                    sql.fragment`${tableAlias}.id = ${sql.value(event.subject)}`
+                );
+              }
+          );
+          return rows[0];
+        }
       }
     },
   };
 });
-
-const pgUser = 'lukas'
 
 /**
  * This is our main entry point of our Express server.
@@ -60,10 +91,12 @@ const App = () => {
   const app = express()
   app.use(express.json())
   app.use(cors()) // This needs to be added
-  app.use(postgraphile(`postgresql://${pgUser}:1234@localhost/catalog_db`, 'public', {
+  app.use(postgraphile(`postgresql://${process.env.PG_USER || 'admin'}:${process.env.PG_PASSWORD || 'admin'}@localhost/catalog_db`, 'public', {
+    pluginHook,
     watchPg: true,
     graphiql: true,
     enhanceGraphiql: true,
+    subscriptions: true,
     appendPlugins: [RegisterTransactionPlugin],
   }))
 
