@@ -690,48 +690,48 @@ glob@^7.1.3, glob@^7.2.0:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-graphile-build-pg@^4.5.0, graphile-build-pg@4.13.0:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/graphile-build-pg/-/graphile-build-pg-4.13.0.tgz"
-  integrity sha512-1FD+3wjCdK1lbICY1QVO26A7s8efSjR522LarL9Bx1M1iBJHNIpCEW2PK+LkulQjY1l5LGQ1A93GQFqi6cZ6bg==
+graphile-build-pg@^4.5.0, graphile-build-pg@4.14.0:
+  version "4.14.0"
+  resolved "https://registry.npmjs.org/graphile-build-pg/-/graphile-build-pg-4.14.0.tgz"
+  integrity sha512-sSsK0PRG3oCPLYqwSWXFpX5aGUIgd6ZLGCAbzdp1M65kW1dFtSITuZQEsQB987YjgxYO6+R4HaZe1GuN8l/gLQ==
   dependencies:
     "@graphile/lru" "4.11.0"
     chalk "^2.4.2"
     debug "^4.1.1"
-    graphile-build "4.13.0"
+    graphile-build "4.14.0"
     jsonwebtoken "^9.0.0"
     lodash ">=4 <5"
     lru-cache ">=4 <5"
-    pg-sql2 "4.13.0"
+    pg-sql2 "4.14.0"
 
-graphile-build@^4.5.0, graphile-build@4.13.0, graphile-build@4.x:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/graphile-build/-/graphile-build-4.13.0.tgz"
-  integrity sha512-KPBrHgRw5fury6l9WEQH6ys1UtnxrRrG+Ehnr68NvfNELp4T+QsekTSVFi5LWoJOaXvdYMqP2L8MFBRQP2vKsw==
+graphile-build@^4.5.0, graphile-build@4.14.0, graphile-build@4.x:
+  version "4.14.0"
+  resolved "https://registry.npmjs.org/graphile-build/-/graphile-build-4.14.0.tgz"
+  integrity sha512-IypfqZ+ugV6t6OXcIa7KGKC3LY59RDQ8aN9nJ5lPPWslSkqhURJN7lWIQ2YQZ0pjBeONl2itAW3HVRw2YFuKrw==
   dependencies:
     "@graphile/lru" "4.11.0"
     chalk "^2.4.2"
     debug "^4.1.1"
-    graphql-parse-resolve-info "4.13.0"
+    graphql-parse-resolve-info "4.14.0"
     iterall "^1.2.2"
     lodash ">=4 <5"
     lru-cache "^5.0.0"
     pluralize "^7.0.0"
-    semver "^6.0.0"
+    semver "^7.5.2"
 
-graphile-utils@^4.13.0:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/graphile-utils/-/graphile-utils-4.13.0.tgz"
-  integrity sha512-6nzlCNeJB1qV9AaPyJ/iHU+CDfs8jxpcmQ47Fmrgmp8r5VwKdL/uDt0LW8IuXu2VZrbM1GGyZ8rQtcdVmQYZ+g==
+graphile-utils@^4.14.0:
+  version "4.14.0"
+  resolved "https://registry.npmjs.org/graphile-utils/-/graphile-utils-4.14.0.tgz"
+  integrity sha512-Ru8FfK8Z/RcRe1IBYd8rUSbiVIkJeSuudBr3RDMO7MdIaXN0ocaXTN515yr/RDoImDUbt6gZ/caleu3iuZHVUQ==
   dependencies:
     debug "^4.1.1"
     graphql ">=0.9 <0.14 || ^14.0.2 || ^15.4.0"
     tslib "^2.0.1"
 
-graphql-parse-resolve-info@4.13.0:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/graphql-parse-resolve-info/-/graphql-parse-resolve-info-4.13.0.tgz"
-  integrity sha512-VVJ1DdHYcR7hwOGQKNH+QTzuNgsLA8l/y436HtP9YHoX6nmwXRWq3xWthU3autMysXdm0fQUbhTZCx0W9ICozw==
+graphql-parse-resolve-info@4.14.0:
+  version "4.14.0"
+  resolved "https://registry.npmjs.org/graphql-parse-resolve-info/-/graphql-parse-resolve-info-4.14.0.tgz"
+  integrity sha512-5Fbquh3IZMciLYgtiWeFxAeZOwpPyonhbaN05fzL/Gll0HS0hMqJh1Q88NQLHiASD6//cJ3LTXLncuajRqsUcA==
   dependencies:
     debug "^4.1.1"
     tslib "^2.0.1"
@@ -1164,10 +1164,10 @@ pg-protocol@*, pg-protocol@^1.6.0:
   resolved "https://registry.npmjs.org/pg-protocol/-/pg-protocol-1.6.0.tgz"
   integrity sha512-M+PDm637OY5WM307051+bsDia5Xej6d9IR4GwJse1qA1DIhiKlksvrneZOYQq42OM+spubpcNYEo2FcKQrDk+Q==
 
-pg-sql2@4.13.0:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/pg-sql2/-/pg-sql2-4.13.0.tgz"
-  integrity sha512-9sUlAR+FCuOPezS+2cQCSRUEmnyYrT929DiceZIsINk4R54hCGSh1OTWIP4gbAZeUMTYeEXnwTfnnEOupLYTRQ==
+pg-sql2@4.14.0:
+  version "4.14.0"
+  resolved "https://registry.npmjs.org/pg-sql2/-/pg-sql2-4.14.0.tgz"
+  integrity sha512-CnKj0LE3jJaP5GWHhcQ5PFxISY44fqQ3TKmMD0k14VrYAcc/CI2ErYXEnnA6klbgXB8F+Lo1/erPSYnoibGFZw==
   dependencies:
     "@graphile/lru" "4.11.0"
     "@types/pg" ">=6 <9"
@@ -1217,19 +1217,19 @@ pluralize@^7.0.0:
   resolved "https://registry.npmjs.org/pluralize/-/pluralize-7.0.0.tgz"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
-postgraphile-core@4.13.0:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/postgraphile-core/-/postgraphile-core-4.13.0.tgz"
-  integrity sha512-8O7xVKZ20K1dTw4KO0jNAfZPNrxNsGG2VrG3Q0IO70ki/OswE6kz/WBZnWFeGxX0sHSEOGWQa4NSrj9EYsSNuw==
+postgraphile-core@4.14.0:
+  version "4.14.0"
+  resolved "https://registry.npmjs.org/postgraphile-core/-/postgraphile-core-4.14.0.tgz"
+  integrity sha512-hhcVyyH0NnzR5DsEoAVv7MMjZviMxs8mfNv7ZhewK4u2dZ8QKznHx5ET/rentnehEWztZwfy/ktjRlN2pC0GjA==
   dependencies:
-    graphile-build "4.13.0"
-    graphile-build-pg "4.13.0"
+    graphile-build "4.14.0"
+    graphile-build-pg "4.14.0"
     tslib "^2.0.1"
 
-postgraphile@^4.13.0, postgraphile@^4.4.0-beta.10:
-  version "4.13.0"
-  resolved "https://registry.npmjs.org/postgraphile/-/postgraphile-4.13.0.tgz"
-  integrity sha512-p2VqUnsECd1XrucylK1iosvKEn96J8CWeMVWzxF7b6G21jmaETvFe2CO2q4+dKY5DFCVEF2O9pEfmUfYCKl5+A==
+postgraphile@^4.14.0, postgraphile@^4.4.0-beta.10:
+  version "4.14.0"
+  resolved "https://registry.npmjs.org/postgraphile/-/postgraphile-4.14.0.tgz"
+  integrity sha512-p/Se0cgS9bzeYPcZGAfd8wnzQHpIqZRhaQvuUkHAzxkKxKnrym71PlMspJ6+IzTuZBUJUMzfkWpOKhTFhwKhvQ==
   dependencies:
     "@graphile/lru" "4.11.0"
     "@types/json5" "^0.0.30"
@@ -1241,9 +1241,9 @@ postgraphile@^4.13.0, postgraphile@^4.4.0-beta.10:
     commander "^2.19.0"
     debug "^4.1.1"
     finalhandler "^1.0.6"
-    graphile-build "4.13.0"
-    graphile-build-pg "4.13.0"
-    graphile-utils "^4.13.0"
+    graphile-build "4.14.0"
+    graphile-build-pg "4.14.0"
+    graphile-utils "^4.14.0"
     graphql "^0.6.0 || ^0.7.0 || ^0.8.0-b || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.2 || ^15.0.0"
     graphql-ws "^5.6.2"
     http-errors "^1.5.1"
@@ -1253,8 +1253,8 @@ postgraphile@^4.13.0, postgraphile@^4.4.0-beta.10:
     parseurl "^1.3.2"
     pg ">=6.1.0 <9"
     pg-connection-string "^2.0.0"
-    pg-sql2 "4.13.0"
-    postgraphile-core "4.13.0"
+    pg-sql2 "4.14.0"
+    postgraphile-core "4.14.0"
     subscriptions-transport-ws "^0.9.18"
     tslib "^2.1.0"
     ws "^7.4.2"
@@ -1364,12 +1364,7 @@ sax@>=0.6.0:
   resolved "https://registry.npmjs.org/sax/-/sax-1.2.4.tgz"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-semver@^6.0.0:
-  version "6.3.0"
-  resolved "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"
-  integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
-
-semver@^7.5.4:
+semver@^7.5.2, semver@^7.5.4:
   version "7.5.4"
   resolved "https://registry.npmjs.org/semver/-/semver-7.5.4.tgz"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
