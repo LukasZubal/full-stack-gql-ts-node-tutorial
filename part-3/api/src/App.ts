@@ -50,7 +50,7 @@ const RegisterTransactionPlugin = makeExtendSchemaPlugin(_build => {
   };
 });
 
-const pgUser = 'pedromanfroi'
+const pgUser = 'lukas'
 
 /**
  * This is our main entry point of our Express server.
@@ -60,7 +60,7 @@ const App = () => {
   const app = express()
   app.use(express.json())
   app.use(cors()) // This needs to be added
-  app.use(postgraphile(`postgresql://${pgUser}@localhost/catalog_db`, 'public', {
+  app.use(postgraphile(`postgresql://${pgUser}:1234@localhost/catalog_db`, 'public', {
     watchPg: true,
     graphiql: true,
     enhanceGraphiql: true,

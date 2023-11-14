@@ -11,3 +11,11 @@ This is the root folder for the GraphQL, TypeScript and Node.js Full-stack tutor
 
 
 Note: additional instructions are found in each subfolder of this repository.
+
+DB setup:
+- create catalog_db database
+- update user name and password at part-3\api\src\App.ts#63 
+- update user name and password at part-3\api\src\data-source.ts
+
+RUN:
+- follow instructions in part-3/api part-3/fe readme
