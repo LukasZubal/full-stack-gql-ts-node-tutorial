@@ -67,7 +67,7 @@ const RegisterTransactionPlugin = makeExtendSchemaPlugin(({ pgSql: sql }) => {
             context,
             { graphile: { selectGraphQLResultFromTable } }
         ) {
-          console.log('event', event);
+          // console.log('event', event);
           const rows = await selectGraphQLResultFromTable(
               sql.fragment`category`,
               (tableAlias, sqlBuilder) => {
@@ -98,6 +98,7 @@ const App = () => {
     enhanceGraphiql: true,
     subscriptions: true,
     appendPlugins: [RegisterTransactionPlugin],
+    disableQueryLog: true,
   }))
 
   app.get('/api/v1/hello', async (req, res, next) => {

@@ -77,7 +77,7 @@ export default defineComponent({
     watch(
       result,
       (data) => {
-        console.log('New message received:', data);
+        console.log('New message received:', Date.now(), data);
       },
       {
         lazy: true, // Don't immediately execute handler

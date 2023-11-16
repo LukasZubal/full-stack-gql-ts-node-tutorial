@@ -41,6 +41,7 @@ export const Categories = (props: {}) => {
   if (!data?.allCategories) return <span>No records found.</span>;
 
   const handleSave = () => {
+    console.log('sent', Date.now())
     setDisplayModal(false);
     // Verifies if it's an update operation or ir it should create a new entity
     // based on having an existing nodeId
